@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Register/login | E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://www.logogenie.net/download/preview/medium/11682380">
+        </div>
+        <div id="menu" onclick="mymenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </div>
+        <nav>
+            <ul id="navbarnavbar" class="default">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="all products.html">Products</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="register.html">Account</a></li>
+                <li><a href="Social media.html">Social Media </a></li>
+            </ul>
+        </nav>
+        <a href="shopping cart.html"><img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" width="30px" height="30px"></a>
+        <script>
+            let bool=false;
+            function mymenu(){
+                if(bool===false){
+                    bool=true;
+            document.getElementById("navbarnavbar").classList.add("gridnav")
+
+                    
+                }
+                else{
+                    bool=false;
+                document.getElementById("navbarnavbar").classList.remove("gridnav")
+
+                }
+                console.log(bool)
+                
+                
+            }
+            
+           
+        </script>
+    </div>
+</div>
+<!------------------------Account-page------------------------------->
+<div class="Account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="https://www.logogenie.net/download/preview/medium/11682380">
+                
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr>
+                    </div>
+
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="Password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <br>
+                        <a href="">Forgot Paasword</a>
+                    </form>
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="Password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------footer--------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-2">
+                <img src="https://www.logogenie.net/download/preview/medium/11682380">
+                <p>Our Purpose Is to Sustainably Make The Pleasure <br>
+                     and Benifits Of New Trendy Fashion <br>
+                      Accessible to the Many</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Usefull Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2022 - Fashion Gate</p>
+    </div>
+</div>
+<!-----------------------js for toggle menu-------------------->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if (MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var Indicator = document.getElementById("Indicator");
+
+    function register(){
+        RegForm.style.transform = "translatex(0px)";
+        RegForm.style.transform = "translatex(0px)";
+        Indicator.style.transform = "translateX(100px)"
+    }
+    function login(){
+        RegForm.style.transform = "translatex(300px)";
+        RegForm.style.transform = "translatex(300px)";
+        Indicator.style.transform = "translateX(0px)"
+    }
+</script>
+</body>
+</html>
